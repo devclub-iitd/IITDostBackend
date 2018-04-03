@@ -4,6 +4,11 @@
 	<title>IITDost</title>
 </head>
 <body>
-	<h1>IITDost{{online_users}}</h1>
+	<h1>IITDost</h1>
+	<p>
+		{% for user in online_users %}
+			<li>{{user._id}}</li>
+		{% endfor %}
+	</p>
 </body>
 </html>
