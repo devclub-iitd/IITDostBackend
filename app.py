@@ -37,8 +37,20 @@ def add_staff(username,password):
 # All Staffs
 @app.route('/staff')
 def staff():
-	staff = staffs.find({})
-	return dumps(staff)
+	staff_ = staffs.find({})
+	return dumps(staff_)
+
+# All Students
+@app.route('/student')
+def student():
+	student_ = students.find({})
+	return dumps(student_)
+
+# All Appointments
+@app.route('/appointment')
+def appointment():
+	appointment_ = appointments.find({})
+	return dumps(appointment_)
 
 
 # Remove all the data
