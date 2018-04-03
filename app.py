@@ -68,15 +68,39 @@ def add_student_form():
 	form = StaffForm(request.form)
 	if request.method == 'POST' and form.validate():
 		name = form.name.data
+		entryno = form.name.data
+		programme_name = form.programme_name.data
+		programme_code = form.programme_code.data
 		dept = form.dept.data
-		typef = form.typef.data
-		room = form.room.data
-		imgurl = form.imgurl.data
+		sbi_ac = form.sbi_ac.data
+		hostel = form.hostel.data
+		gender = form.gender.data
+		nationality = form.nationality.data
+		dob = form.dob.data
+		mob_no = form.mob_no.data
+		email = form.email.data
+		category = form.category.data
+		address = form.address.data
 		
-		staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True, 'image':imgurl}
-		staffs.insert(staff)
+		student = 	{
+						'name' : name,
+						'entryno' : entryno,
+						'programme_name' : programme_name,
+						'programme_code' : programme_code,
+						'dept' : dept,
+						'sbi_ac' : sbi_ac,
+						'hostel' : hostel,
+						'gender' : gender,
+						'nationality' : nationality,
+						'dob' : dob,
+						'mob_no' : mob_no,
+						'email' : email,
+						'category' : category,
+						'address' : address
+					}
+		studentss.insert(student)
 		return redirect(url_for('index'))
-	return render_template('add_staff_form.html', form=form)	
+	return render_template('add_student_form.html', form=form)	
 
 # Homepage
 @app.route('/')
