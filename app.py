@@ -28,9 +28,9 @@ def index():
 	# app.logger.info(app.name)
 
 # Adding staffs
-@app.route('/add_staff/<string:username>/<string:password>/')
-def add_staff(username,password):
-	staff = {'username':username, 'password':password, 'online':True}
+@app.route('/add_staff/<string:name>/<string:dept>/<string:typef>/<string:room>')
+def add_staff(name,dept,typef,room):
+	staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True}
 	staffs.insert(staff)
 	return redirect(url_for('index'))
 
