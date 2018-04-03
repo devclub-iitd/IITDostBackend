@@ -2,6 +2,7 @@
 from flask import Flask, render_template, logging, redirect, url_for
 # from flask_pymongo import PyMongo
 from pymongo import MongoClient
+from bson.json_util import dumps, loads
 
 # Initializing MongoDB
 client = MongoClient('localhost', 27017)
@@ -27,11 +28,17 @@ def index():
 	# app.logger.info(app.name)
 
 # Adding staffs
-@app.route('/add_staff/<string:name>/<string:password>/')
+@app.route('/add_staff/<string:username>/<string:password>/')
 def add_staff(username,password):
 	staff = {'username':username, 'password':password, 'online':True}
 	staffs.insert(staff)
 	return redirect(url_for('index'))
+
+# All Staffs
+@app.route('/staff')
+def staff():
+	staff = staffs.find({})
+	return dumps(staff)
 
 
 # Remove all the data
