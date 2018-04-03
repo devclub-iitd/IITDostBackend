@@ -23,6 +23,11 @@ def add_user(username,password):
 	users.insert(user)
 	return redirect(url_for('index'))
 
+@app.route('/refresh')
+def refresh():
+	db.users.drop()
+	return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
 	app.run(debug=True)
