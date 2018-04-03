@@ -1,2 +1,8 @@
 DEBUG=* mongodb-compass
 python3 app.py
+
+http://127.0.0.1:5000/add_staff/abc/CS/Prof/SD-29?imgurl=https%3A%2F%2Fwww.google.co.in%2Flogos%2Fdoodles%2F2018%2Fkamaladevi-chattopadhyays-115th-birthday-5444188786130944-l.png
+
+from urllib.parse import qutoe
+
+quote('/test', safe='')

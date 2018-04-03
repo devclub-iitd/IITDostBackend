@@ -1,5 +1,5 @@
 # imports
-from flask import Flask, render_template, logging, redirect, url_for
+from flask import Flask, render_template, logging, redirect, url_for, request
 # from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.json_util import dumps, loads
@@ -30,9 +30,10 @@ def index():
 # Adding staffs
 @app.route('/add_staff/<string:name>/<string:dept>/<string:typef>/<string:room>')
 def add_staff(name,dept,typef,room):
-	staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True}
+	staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True, 'image':request.args.get('imgurl')}
 	staffs.insert(staff)
 	return redirect(url_for('index'))
+
 
 # All Staffs
 @app.route('/staff')
@@ -66,3 +67,4 @@ def refresh():
 # Starting App
 if __name__ == '__main__':
 	app.run(debug=True)
+

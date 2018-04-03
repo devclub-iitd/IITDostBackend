@@ -6,6 +6,7 @@
 	<p>
 		{% for user in online_users %}
 			<li>{{user}}</li>
+			<img src="{{user.image}}">
 		{% endfor %}
 	</p>
 
