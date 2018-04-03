@@ -21,12 +21,28 @@ app = Flask(__name__)
 
 
 # Class Staff
-class Staff(Form):
+class StaffForm(Form):
 	name = StringField('Name',[validators.length(min=1, max=50)])
 	dept = StringField('Department',[validators.length(min=1, max=50)])
 	typef = StringField('Staff Category',[validators.length(min=1, max=50)])
 	room = StringField('Room',[validators.length(min=1, max=50)])
 	imgurl = StringField('imgurl',[validators.length(min=1, max=100)])
+
+# Add Staff using form
+@app.route('/add_staff/form', methods = ['GET', 'POST'])
+def add_staff_form():
+	form = StaffForm(request.form)
+	if request.method == 'POST' and form.validate():
+		name = form.name.data
+		dept = form.dept.data
+		typef = form.typef.data
+		room = form.room.data
+		umgurl = form.imgurl.data
+		
+		staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True, 'image':request.args.get('imgurl')}
+		staffs.insert(staff)
+		return redirect(url_for('index'))
+	return render_template('add_staff_form.html', form=form)		
 
 # Homepage
 @app.route('/')
