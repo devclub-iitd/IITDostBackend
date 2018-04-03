@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>IITDost</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+
+{% block body %}
+
 	<h1>IITDost</h1>
 	<p>
 		{% for user in online_users %}
 			<li>{{user}}</li>
 		{% endfor %}
 	</p>
-</body>
-</html>
+
+{% endblock %}
