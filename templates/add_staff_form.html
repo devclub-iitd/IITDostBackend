@@ -3,8 +3,24 @@
 {% block body %}
 
 	<h1>Add Staff</h1>
-	<div class="form-control">
-		
-	</div>
+	{% from 'includes/_formhelpers.html' import render_field %}
+	<form method="POST", action="">
+		<div class="form-group">
+			{{ render_field(form.name, class_="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ render_field(form.dept, class_="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ render_field(form.typef, class_="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ render_field(form.room, class_="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ render_field(form.imgurl, class_="form-control") }}
+		</div>
+		<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+	</form>
 
 {% endblock %}
