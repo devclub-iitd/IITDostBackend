@@ -37,9 +37,9 @@ def add_staff_form():
 		dept = form.dept.data
 		typef = form.typef.data
 		room = form.room.data
-		umgurl = form.imgurl.data
+		imgurl = form.imgurl.data
 		
-		staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True, 'image':request.args.get('imgurl')}
+		staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True, 'image':imgurl}
 		staffs.insert(staff)
 		return redirect(url_for('index'))
 	return render_template('add_staff_form.html', form=form)		
