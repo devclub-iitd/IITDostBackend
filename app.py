@@ -42,7 +42,41 @@ def add_staff_form():
 		staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True, 'image':imgurl}
 		staffs.insert(staff)
 		return redirect(url_for('index'))
-	return render_template('add_staff_form.html', form=form)		
+	return render_template('add_staff_form.html', form=form)	
+
+# Class Student
+class StudentForm(Form):
+	name = StringField('Name',[validators.length(min=1, max=50)])
+	entryno = StringField('Entry No.',[validators.length(min=11, max=11)])
+	programme_name = StringField('Programme Name',[validators.length(min=1, max=50)])
+	programme_code = StringField('Programme Code',[validators.length(min=1, max=50)])
+	dept = StringField('Department',[validators.length(min=1, max=50)])
+	sbi_ac = StringField('SBI A/C No.',[validators.length(min=1, max=50)])
+	hostel = StringField('Hostel',[validators.length(min=1, max=20)])
+	gender = StringField('Gender',[validators.length(min=1, max=10)])
+	nationality = StringField('Nationality.',[validators.length(min=1, max=20)])
+	dob = StringField('Date of Birth',[validators.length(min=8, max=8)])
+	mob_no = StringField('Mobile No.',[validators.length(min=1, max=20)])
+	email = StringField('Email Id',[validators.length(min=1, max=50)])
+	category = StringField('Category',[validators.length(min=1, max=10)])
+	address = TextAreaField('Address',[validators.length(min=1, max=100)])
+
+
+# Add Student using form
+@app.route('/add_student/form', methods = ['GET', 'POST'])
+def add_student_form():
+	form = StaffForm(request.form)
+	if request.method == 'POST' and form.validate():
+		name = form.name.data
+		dept = form.dept.data
+		typef = form.typef.data
+		room = form.room.data
+		imgurl = form.imgurl.data
+		
+		staff = {'name':name, 'dept':dept, 'type':typef, 'room':room, 'online':True, 'image':imgurl}
+		staffs.insert(staff)
+		return redirect(url_for('index'))
+	return render_template('add_staff_form.html', form=form)	
 
 # Homepage
 @app.route('/')
