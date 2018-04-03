@@ -3,6 +3,7 @@ from flask import Flask, render_template, logging, redirect, url_for, request
 # from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.json_util import dumps, loads
+from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 
 # Initializing MongoDB
 client = MongoClient('localhost', 27017)
@@ -18,6 +19,14 @@ app = Flask(__name__)
 # app.config["MONGO_DBNAME"]='iitdost'
 # mongo = PyMongo(app)
 
+
+# Class Staff
+class Staff(Form):
+	name = StringField('Name',[validators.length(min=1, max=50)])
+	dept = StringField('Department',[validators.length(min=1, max=50)])
+	typef = StringField('Staff Category',[validators.length(min=1, max=50)])
+	room = StringField('Room',[validators.length(min=1, max=50)])
+	imgurl = StringField('imgurl',[validators.length(min=1, max=100)])
 
 # Homepage
 @app.route('/')
