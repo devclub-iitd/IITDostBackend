@@ -4,7 +4,10 @@ from pymongo import MongoClient
 
 client = MongoClient('localhost', 27017)
 db = client.iitdost
-users = db.users
+
+staffs = db.staffs
+students = db.students
+appointments = db.appointments
 
 app = Flask(__name__)
 # app.config["MONGO_DBNAME"]='iitdost'
@@ -13,19 +16,22 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	# online_users = mongo.db.users.find({'online': 'True'})
-	online_users = users.find({'online': True})
+	online_users = staffs.find({'online': True})
 	return render_template('index.html', online_users=online_users)
 	# app.logger.info(app.name)
 
-@app.route('/add/<string:username>/<string:password>/')
+@app.route('/add/<string:name>/<string:password>/')
 def add_user(username,password):
-	user = {'username':username, 'password':password, 'online':True}
-	users.insert(user)
+	staff = {'username':username, 'password':password, 'online':True}
+	staffs.insert(staff)
 	return redirect(url_for('index'))
 
 @app.route('/refresh')
 def refresh():
-	db.users.drop()
+	# db.users.drop()
+	db.staffs.drop()
+	db.students.drop()
+	db.appointments.drop()
 	return redirect(url_for('index'))
 
 
