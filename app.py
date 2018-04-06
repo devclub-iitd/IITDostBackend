@@ -4,6 +4,7 @@ from flask import Flask, render_template, logging, redirect, url_for, request
 from pymongo import MongoClient
 from bson.json_util import dumps, loads
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
+import os
 
 # Initializing MongoDB
 client = MongoClient('localhost', 27017)
@@ -16,6 +17,7 @@ appointments = db.appointments
 
 # Initializing app
 app = Flask(__name__)
+app._static_folder = os.path.abspath("static")
 # app.config["MONGO_DBNAME"]='iitdost'
 # mongo = PyMongo(app)
 
