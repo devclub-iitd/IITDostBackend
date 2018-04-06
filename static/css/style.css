@@ -17,6 +17,12 @@
     src : url(../fonts/Antonio-Regular.ttf);
 }
 
+@font-face {
+    font-family: Antonio_Bold;
+    /*src: url(url_for('static', filename='fonts/Antonio-Light.ttf'));*/
+    src : url(../fonts/Antonio-Bold.ttf);
+}
+
 body {
 	background-color: #EEEEEE;
 	padding: 0px;
@@ -170,4 +176,37 @@ body {
 
 #searchbtn {
 	min-width: 120px;
+	background-color: #113157;
+	color: #FFFFFF;
+	border-color: #113157;
+	border-radius: 5px;
+	height: 20pt;
+}
+
+.cardview {
+	/*overflow: hidden;*/
+	/*display: flex;*/
+}
+
+.card {
+	width: 12%;
+	height: 8%;
+	background-color: #FFFFFF;
+	padding: 15px;
+	border-radius: 10px;
+	align-content: center;
+	text-align: center;
+	margin: 10px;
+}
+
+.card_no {
+	font-size: 30pt;
+	font-family: Antonio_Bold;
+	color: #113157;
+}
+
+.card_text{
+	font-family: Arial;
+	color: #777777;
+	font-weight: 2pt;
 }
