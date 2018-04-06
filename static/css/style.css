@@ -18,7 +18,7 @@
 }
 
 body {
-	background-color: #c3baba;
+	background-color: #EEEEEE;
 	padding: 0px;
 }
 
@@ -162,4 +162,12 @@ body {
 	position: fixed;
 	top: 15%;
 	left: 22%;
+}
+
+#search {
+	min-width: 900px;
+}
+
+#searchbtn {
+	min-width: 120px;
 }
