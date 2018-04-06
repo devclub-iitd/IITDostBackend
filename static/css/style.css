@@ -4,6 +4,19 @@
 4. White #FFFFFF
 5. Black #000000
 */
+
+@font-face {
+    font-family: Antonio_Light;
+    /*src: url(url_for('static', filename='fonts/Antonio-Light.ttf'));*/
+    src : url(../fonts/Antonio-Light.ttf);
+}
+
+@font-face {
+    font-family: Antonio_Regular;
+    /*src: url(url_for('static', filename='fonts/Antonio-Light.ttf'));*/
+    src : url(../fonts/Antonio-Regular.ttf);
+}
+
 body {
 	background-color: #c3baba;
 	padding: 0px;
@@ -16,6 +29,7 @@ body {
 	position: fixed;
 	top: 0px;
 	left: 0px;
+	color: #FFFFFF;
 }
 
 .top {
@@ -25,4 +39,21 @@ body {
 	position: fixed;
 	top: 0px;
 	left: 20%;
+}
+
+.logo {
+	margin-left: 5%;
+	margin-top: 5%;
+	width: 20%;
+}
+
+.heading {
+	/*margin-top: 10%;*/
+	/*line-height: 50pt;*/
+	/*padding-top: 50%;*/
+	position: fixed;
+	top:10px;
+	margin-left: 2%;
+	font-size: 30pt;
+	font-family: Antonio_Light;
 }
