@@ -1,3 +1,28 @@
+/*1. Blue #113157
+2. Green #238053
+3. Grey #c3baba
+4. White #FFFFFF
+5. Black #000000
+*/
 body {
-	background-color: #000000;
+	background-color: #c3baba;
+	padding: 0px;
+}
+
+.left {
+	background-color: #113157;
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+.top {
+	background-color: #238053;
+	width: 80%;
+	height: 10%;
+	position: fixed;
+	top: 0px;
+	left: 20%;
 }
