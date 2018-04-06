@@ -35,10 +35,11 @@ body {
 .top {
 	background-color: #238053;
 	width: 80%;
-	height: 10%;
+	height: 11%;
 	position: fixed;
 	top: 0px;
 	left: 20%;
+	color: #FFFFFF;
 }
 
 .logo {
@@ -65,7 +66,7 @@ body {
 }
 
 .name {
-	margin-bottom: 15%;
+	margin-bottom: 10%;
 	/*padding-bottom: 15%;*/
 }
 
@@ -100,4 +101,65 @@ body {
 	margin-left: 6%;
 	font-size: 15pt;
 	font-family: Arial;
+}
+
+.welcome {
+	margin-top: 1%;
+	margin-left: 2%;
+}
+
+.welcome1 {
+	font-size: 15pt;
+}
+
+.welcome2 {
+	font-size: 12pt;
+}
+
+.settings {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 13px;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: fixed;
+	top : 3%;
+	right: 12%;
+	left: 80%;
+	font-family: Antonio_Regular;
+}
+
+.logout {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 13px;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: fixed;
+	top : 3%;
+	right: 2%;
+	left: 90%;
+	font-family: Antonio_Regular;
+}
+
+.btn_icon {
+	/*position: fixed;*/
+	margin-left: 5%;
+	margin-right: 5%;
+	/*margin-top: 0%;*/
+	width: 20%;
+}
+
+.main {
+	position: fixed;
+	top: 15%;
+	left: 22%;
 }

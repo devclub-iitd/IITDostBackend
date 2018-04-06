@@ -50,7 +50,22 @@
 </div>
 
 <div class="top">
-	
+
+	<div class="welcome">
+
+		<text class="welcome1">Welcome Back to your Admin, Mr. Kumar!</text><br>
+		<text class="welcome2">Last Login: 9:00 am, 06/03/2018</text>
+
+		<a href="#" class="settings"><img src="{{ url_for('static', filename='imgs/placeholder.png') }}" alt="Avatar" class="btn_icon"> SETTINGS</a>
+
+		<a href="#" class="logout"><img src="{{ url_for('static', filename='imgs/placeholder.png') }}" alt="Avatar" class="btn_icon"> LOG OUT</a>
+
+	</div>
+
+</div>
+
+<div class="main">
+	<input type="text" name="search" placeholder="Search.."> 
 </div>
 
 {% endblock %}
