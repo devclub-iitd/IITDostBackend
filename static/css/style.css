@@ -215,3 +215,13 @@ body {
 	color: #888888;
 	font-family: Arial;
 }
+
+.green_box{
+	width: 4px;
+	background-color: #238053;
+	height: 130%;
+	float: left;
+	overflow: hidden;
+	margin: 0px;
+	margin-top: -5%;
+}
