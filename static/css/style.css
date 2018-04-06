@@ -48,12 +48,56 @@ body {
 }
 
 .heading {
-	/*margin-top: 10%;*/
-	/*line-height: 50pt;*/
-	/*padding-top: 50%;*/
 	position: fixed;
 	top:10px;
 	margin-left: 2%;
 	font-size: 30pt;
 	font-family: Antonio_Light;
+}
+
+.name h3 {
+	position: fixed;
+	top:15%;
+	margin-left: 8%;
+	font-size: 15pt;
+	line-height: 12pt;
+	font-family: Arial;
+}
+
+.name {
+	margin-bottom: 15%;
+	/*padding-bottom: 15%;*/
+}
+
+.photo {
+	margin-left: 5%;
+	margin-top: 2%;
+	width: 20%;
+}
+
+.tabs-active{
+	background-color: #163246;
+}
+
+.tabs{
+	padding-top: 5%;
+	height: 8%;
+	/*margin-top: 15%;*/
+}
+
+.tab_icon {
+	/*position: fixed;*/
+	margin-left: 6%;
+	margin-top: 0%;
+	width: 11%;
+}
+
+.tab_label{
+	/*position: fixed;*/
+	position: relative;
+	margin-top:10%;
+	line-height: 20pt;
+	margin-left: 6%;
+	font-size: 15pt;
+	font-family: Arial;
 }
