@@ -110,6 +110,14 @@ def index():
 	return render_template('index.html', online_users=online_users)
 	# app.logger.info(app.name)
 
+# All Staffs
+@app.route('/staffs_all')
+def staffs_all():
+	# online_users = mongo.db.users.find({'online': 'True'})
+	online_users = staffs.find({'online': True})
+	return render_template('staffs_all.html', online_users=online_users)
+	# app.logger.info(app.name)
+
 # Adding staffs
 @app.route('/add_staff/<string:name>/<string:dept>/<string:typef>/<string:room>')
 def add_staff(name,dept,typef,room):

@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<h1>IITDost</h1>
+	<p>
+		<table class="table table-striped">
+			<tr>
+				<th>Photo</th>
+				<th>Name</th>
+				<th>Department</th>
+				<th>Staff Category</th>
+				<th>Room no.</th>
+			</tr>
+			{% for user in online_users %}
+				<tr>
+					<td><img src="{{user.image}}" style="width:100px;"></td>
+					<td>{{user.name}}</td>
+					<td>{{user.dept}}</td>
+					<td>{{user.type}}</td>
+					<td>{{user.room}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</p>
+
+{% endblock %}
