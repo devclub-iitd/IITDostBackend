@@ -11,7 +11,7 @@ The database schema for this section can be described as follows-
 //Insert schema diagram here
 
 There are three main collections- 'Students', 'Staff', 'Appointments'
-Students collection-
+Students collection-\
   {
     Student_details: //details like name, entry number etc
     Appointments: //List of references to appointments in the 'Appointments' collection
