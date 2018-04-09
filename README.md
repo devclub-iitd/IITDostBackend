@@ -1,7 +1,7 @@
 # IITDost_Backend
 IITDost_Backend
 
-This is the backend for the IITDost app, which will code for all the apis which will be required for the app (along with server-side scripts for sending out push notifications). 
+This is the backend for the IITDost app, which will contain code for all the apis which will be required for the app + web portal (along with server-side scripts for sending out push notifications). 
 
 The link for the marvel app to understand the app flow -  https://marvelapp.com/1486bbd6 
 
