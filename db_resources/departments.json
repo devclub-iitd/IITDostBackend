@@ -17,7 +17,14 @@
         "Student Affairs",
         "Training & Placement",
         "U.G. Section"
-    ]
+    ],
+    "Others":["Student Hostels",
+         "Guest House", 
+         "R & D Unit",
+         "Store & Purchase"
+        ,"Transport Unit",
+        "Sports Office"]
+
 
     }
 }]
