@@ -1,0 +1,23 @@
+[{ "Departments":
+    {
+    "Academic":[
+        "Applied Mechanics",
+        "Biochemical",
+        "Chemical",
+        "Civil",
+        "Computer Science",
+        "Design",
+        "Electrical"
+    ],
+    "Administrative":[
+        "Accounts Section",
+        "Alumni Affairs",
+        "P.G. Section",
+        "Security Unit",
+        "Student Affairs",
+        "Training & Placement",
+        "U.G. Section"
+    ]
+
+    }
+}]

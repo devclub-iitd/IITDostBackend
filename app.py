@@ -11,6 +11,7 @@ client = MongoClient('localhost', 27017)
 db = client.iitdost
 
 # Collections
+generalCollection=db.general #Departments and other information
 staffs = db.staffs
 students = db.students
 appointments = db.appointments
@@ -20,6 +21,7 @@ app = Flask(__name__)
 app._static_folder = os.path.abspath("static")
 # app.config["MONGO_DBNAME"]='iitdost'
 # mongo = PyMongo(app)
+
 
 
 # Class Staff
@@ -155,6 +157,13 @@ def refresh():
 	db.students.drop()
 	db.appointments.drop()
 	return redirect(url_for('index'))
+
+# All Appointments
+@app.route('/api/departments')
+def get_department_list():
+	curs=generalCollection.find({"Departments":{'$exists':True}}) 
+	return dumps(list(curs))
+	
 
 
 # Starting App
